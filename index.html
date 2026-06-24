@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meeting Cost Calculator — See What Your Meetings Really Cost | BoardroomCost</title>
+<meta name="description" content="Free meeting cost calculator. Enter attendees, salary, and duration to instantly see the real cost of your business meetings — per meeting, per month, per year.">
+<link rel="canonical" href="https://boardroomcost.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meeting Cost Calculator | BoardroomCost">
+<meta property="og:description" content="Discover how much your business meetings really cost. Real-time calculator with shock factor, comparisons, and ROI analysis.">
+<meta property="og:url" content="https://boardroomcost.com/">
+<meta property="og:image" content="https://boardroomcost.com/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meeting Cost Calculator | BoardroomCost">
+<meta name="twitter:description" content="Your weekly 1-hour team meeting costs how much per year? Calculate now — the answer will shock you.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080D1A'/><rect x='15' y='35' width='70' height='45' rx='6' fill='none' stroke='%23F59E0B' stroke-width='5'/><circle cx='35' cy='57' r='5' fill='%23F59E0B'/><circle cx='50' cy='57' r='5' fill='%23F59E0B'/><circle cx='65' cy='57' r='5' fill='%23F59E0B'/><rect x='35' y='20' width='6' height='18' rx='3' fill='%23F59E0B'/><rect x='59' y='20' width='6' height='18' rx='3' fill='%23F59E0B'/></svg>">
+<link rel="stylesheet" href="css/style.css">
+<!-- REPLACE WITH YOUR ADSENSE CODE -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"BoardroomCost Meeting Calculator",
+  "url":"https://boardroomcost.com/",
+  "applicationCategory":"BusinessApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Calculate the true cost of business meetings in real time, including salary costs, opportunity cost, and annual ROI impact."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much do business meetings cost?","acceptedAnswer":{"@type":"Answer","text":"The average cost depends on how many people attend and their salaries. A typical 1-hour weekly meeting with 8 people earning $80,000/year costs roughly $2,000–$2,500 per year, factoring in loaded labor costs including benefits and overhead."}},
+    {"@type":"Question","name":"How do you calculate the cost of a meeting?","acceptedAnswer":{"@type":"Answer","text":"Multiply the number of attendees by their average hourly rate (annual salary divided by 2,080 working hours) by the meeting duration in hours. Most experts also apply a 1.3x multiplier for benefits and overhead. Our calculator does all of this automatically."}},
+    {"@type":"Question","name":"What is the Amazon two-pizza rule for meetings?","acceptedAnswer":{"@type":"Answer","text":"Amazon's two-pizza rule states that any meeting should be small enough that two pizzas could feed everyone in the room — typically 5–8 people. Jeff Bezos introduced it to reduce the cost and inefficiency of large meetings."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">$£€</div>
+      Boardroom<span>Cost</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Calculator</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="mobile-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html" class="active">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════ HERO + CALCULATOR ═══════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Real-time meeting cost meter</div>
+    <h1>Your meetings are costing you<br><span class="shock">more than you think</span></h1>
+    <p class="hero-sub">Enter your meeting details and watch the true cost appear in real time — per meeting, per month, per year. The numbers will surprise you.</p>
+
+    <!-- CALCULATOR CARD -->
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <div class="calc-card-title">
+          <div class="status-dot"></div>
+          Meeting Cost Calculator — Live
+        </div>
+        <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);">Includes 1.3× overhead multiplier</span>
+      </div>
+
+      <div class="calc-body">
+
+        <!-- ROW 1: Attendees + Salary + Duration -->
+        <div class="input-grid input-row-3">
+          <div class="field">
+            <label for="attendees">Attendees <span class="tip" title="Number of people in the meeting">?</span></label>
+            <input type="number" id="attendees" min="1" max="500" value="8" step="1">
+            <input type="range" id="attendeesRange" min="1" max="50" value="8" step="1" style="margin-top:4px;">
+          </div>
+          <div class="field">
+            <label for="avgSalary">Avg. Annual Salary ($) <span class="tip" title="Average annual salary of attendees in USD">?</span></label>
+            <input type="number" id="avgSalary" min="0" step="5000" value="80000" placeholder="e.g. 80000">
+          </div>
+          <div class="field">
+            <label for="durationMins">Duration (minutes) <span class="tip" title="Length of the meeting in minutes">?</span></label>
+            <input type="number" id="durationMins" min="5" max="480" step="5" value="60">
+            <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
+              <button class="btn btn-outline btn-sm duration-preset" data-mins="15">15m</button>
+              <button class="btn btn-outline btn-sm duration-preset" data-mins="25">25m</button>
+              <button class="btn btn-outline btn-sm duration-preset active" data-mins="60">1h</button>
+              <button class="btn btn-outline btn-sm duration-preset" data-mins="90">1.5h</button>
+              <button class="btn btn-outline btn-sm duration-preset" data-mins="120">2h</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2: Frequency + ROI Reduction -->
+        <div class="input-grid" style="grid-template-columns:1fr 1fr;margin-bottom:0;">
+          <div class="field">
+            <label for="frequency">Meeting Frequency</label>
+            <select id="frequency">
+              <option value="once">One-time only</option>
+              <option value="daily">Daily (5×/week)</option>
+              <option value="weekly" selected>Weekly</option>
+              <option value="biweekly">Bi-weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="reductionPct">If you cut meeting time by <span id="reductionPctVal" class="range-val">30%</span></label>
+            <input type="range" id="reductionPct" min="10" max="90" step="5" value="30">
+            <div style="font-size:0.74rem;color:var(--text-muted);margin-top:4px;">Drag to model your ROI savings</div>
+          </div>
+        </div>
+
+        <div class="calc-actions-row">
+          <button class="btn btn-gold" id="calcBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3M16 3h5v5M21 3l-9 9"/></svg>
+            Calculate Real Cost
+          </button>
+          <button class="btn btn-outline" id="exportCsvBtn">Export CSV</button>
+          <button class="btn btn-outline" id="printBtn">Print Report</button>
+        </div>
+
+        <!-- ═══ TAXI METER DISPLAY ═══ -->
+        <div class="meter-section" id="resultsSection">
+          <div class="meter-label">Cost meter</div>
+
+          <div class="meter-grid">
+            <div class="meter-cell">
+              <div class="meter-cell-label">Annual cost</div>
+              <div class="digit-display main" id="costPerYear">$0</div>
+            </div>
+            <div class="meter-cell">
+              <div class="meter-cell-label">Per meeting</div>
+              <div class="digit-display secondary" id="costPerMeeting">$0</div>
+            </div>
+            <div class="meter-cell">
+              <div class="meter-cell-label">Monthly</div>
+              <div class="digit-display secondary" id="costPerMonth">$0</div>
+            </div>
+            <div class="meter-cell">
+              <div class="meter-cell-label">Hours/year burned</div>
+              <div class="digit-display tertiary" id="hoursBurned">0h</div>
+            </div>
+          </div>
+
+          <div class="shock-phrase" id="shockPhrase">← Fill in the fields to reveal the real cost of your meetings</div>
+
+          <div class="comparison-row">
+            <div class="comparison-card" id="comp0">
+              <div class="comparison-icon">👨‍💻</div>
+              <div class="comparison-val">—</div>
+              <div class="comparison-desc">junior developer salaries/year</div>
+            </div>
+            <div class="comparison-card" id="comp1">
+              <div class="comparison-icon">💻</div>
+              <div class="comparison-val">—</div>
+              <div class="comparison-desc">MacBook Pros you could buy</div>
+            </div>
+            <div class="comparison-card" id="comp2">
+              <div class="comparison-icon">🎓</div>
+              <div class="comparison-val">—</div>
+              <div class="comparison-desc">employee training courses</div>
+            </div>
+          </div>
+
+          <!-- ROI strip -->
+          <div style="margin-top:16px;padding:16px 20px;background:var(--green-dim);border:1px solid rgba(16,185,129,0.25);border-radius:var(--radius-xs);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+            <span id="roiLabel" style="font-size:0.86rem;color:var(--green);">If you reduce meeting time by 30%, you save:</span>
+            <span class="digit-display savings" style="font-size:1.6rem;" id="roiSavings">$0</span>
+          </div>
+        </div>
+
+        <!-- Share with boss -->
+        <div class="share-section" id="shareSection">
+          <p id="shareMessage" style="display:none;"></p>
+          <div>
+            <div style="font-size:0.82rem;color:var(--text-soft);margin-bottom:8px;font-weight:600;">Share the reality check 👇</div>
+            <div class="share-btns">
+              <button class="btn btn-gold btn-sm" id="emailManagerBtn">📧 Email to Manager</button>
+              <button class="btn btn-outline btn-sm" id="copyShareBtn">📋 Copy Message</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /calc-body -->
+    </div><!-- /calc-card -->
+  </div>
+</section>
+
+<div class="container">
+  <div class="adsense-slot leaderboard" data-slot="home-top" data-size="728x90"></div>
+</div>
+
+<!-- ═══ STATS ═══ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-val">$37K</div>
+        <div class="stat-label">Average annual cost of a weekly 1-hour team meeting (8 people)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">23M</div>
+        <div class="stat-label">Meetings happen every day in the US alone</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">$37B</div>
+        <div class="stat-label">Lost annually to unproductive meetings in the US</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">71%</div>
+        <div class="stat-label">of senior managers say meetings are unproductive (HBR)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why use BoardroomCost</span>
+      <h2>Built for the CFO argument you've been avoiding</h2>
+      <p>Stop guessing. Start calculating. These numbers are what your leadership team needs to see before scheduling another optional status update.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Real-time taxi meter</h3>
+        <p>Watch the cost climb as you type. Numbers update live so you see the impact of every extra attendee or extra minute instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
+        <h3>Loaded cost model</h3>
+        <p>We apply a 1.3× overhead multiplier automatically — your meeting costs more than just salaries when you include benefits and overhead.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>ROI reduction model</h3>
+        <p>Drag the slider to model how much you save by cutting meeting time by 20%, 30%, or 50% — instant savings projection for your proposal.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h3>"Email to Manager" button</h3>
+        <p>One click generates a professionally formatted message you can send directly to your manager or team — with all the numbers pre-filled.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        <h3>CSV export</h3>
+        <p>Download a clean meeting cost report you can drop into a presentation, a board deck, or your expense tracking spreadsheet.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Vivid comparisons</h3>
+        <p>See your annual meeting cost translated into developer salaries, MacBooks, or training courses — the kind of context that actually lands in a meeting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRY BENCHMARKS ═══ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Industry benchmarks</span>
+      <h2>What top companies do differently</h2>
+      <p>The world's most productive organizations have specific, documented rules about meetings. Here's what the research and internal policies show.</p>
+    </div>
+    <div class="benchmarks-grid">
+      <div class="benchmark-card">
+        <div class="bench-logo">AMZ</div>
+        <div class="bench-content">
+          <h4>Amazon's two-pizza rule</h4>
+          <p>Jeff Bezos mandates that any meeting should be small enough to be fed by two pizzas — typically 5–8 people. Larger groups are split or cancelled. Amazon also famously bans PowerPoint decks, replacing them with 6-page narrative memos read in silence at the start of every meeting.</p>
+        </div>
+      </div>
+      <div class="benchmark-card">
+        <div class="bench-logo">GOOG</div>
+        <div class="bench-content">
+          <h4>Google's 25/50-minute rule</h4>
+          <p>Google defaults all meetings to 25 or 50 minutes rather than 30 or 60, building a natural buffer for restroom breaks and transition time. Internal research showed this reduced back-to-back meeting fatigue and increased overall focus time by over 15%.</p>
+        </div>
+      </div>
+      <div class="benchmark-card">
+        <div class="bench-logo">META</div>
+        <div class="bench-content">
+          <h4>Meta's "no meeting Wednesdays"</h4>
+          <p>Meta implemented company-wide meeting-free Wednesdays to give engineers and makers uninterrupted deep work time. Studies show that even one day of protected time per week increases individual output by up to 30%.</p>
+        </div>
+      </div>
+      <div class="benchmark-card">
+        <div class="bench-logo">ASNA</div>
+        <div class="bench-content">
+          <h4>Asana's meeting-free mornings</h4>
+          <p>Asana protects the first hours of every workday from meetings, citing research that the morning hours are when most knowledge workers report peak focus and creativity. Meetings are scheduled for afternoons only by default.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">From the blog</span>
+      <h2>Meeting productivity guides</h2>
+    </div>
+    <div class="blog-grid" id="homeBlogGrid">
+      <div class="skeleton" style="height:300px;"></div>
+      <div class="skeleton" style="height:300px;"></div>
+      <div class="skeleton" style="height:300px;"></div>
+    </div>
+    <div class="text-center" style="margin-top:32px;">
+      <a href="blog.html" class="btn btn-outline">View all articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section section-alt">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-group">
+      <div class="faq-item">
+        <button class="faq-q">How much does an average business meeting cost?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a">It depends heavily on team size and salaries, but a typical 1-hour weekly meeting with 8 people earning $80,000/year costs approximately $2,000–$2,500 per year in direct salary cost alone. With overhead factored in (benefits, workspace, tools), the real number is 30% higher. Our calculator applies this multiplier automatically.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why does the calculator use a 1.3× overhead multiplier?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a">Salary is only part of what an employee costs. Add employer-paid benefits (health insurance, retirement contributions), payroll taxes, workspace cost, software subscriptions, and HR overhead, and most employees cost 25–40% more than their base salary. We use 1.3× as a conservative estimate — the actual number for your company may be higher.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the Amazon two-pizza rule?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a">Jeff Bezos popularized the idea that any meeting should be small enough to be fed by two pizzas — typically no more than 5–8 people. The principle is that larger groups produce worse decisions more slowly, and that the cost of getting everyone in a room grows quadratically with headcount.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How can I reduce meeting costs at my company?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a">The most effective approaches: reduce meeting duration (default 25/50 min instead of 30/60), reduce attendees to only essential decision-makers, replace status update meetings with asynchronous tools like Slack or Loom, implement meeting-free days, and require a clear agenda and decision owner for every meeting. Our blog has detailed guides on each approach.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does this calculator store my salary data?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a">No. All calculations happen locally in your browser. Nothing you enter is sent to our servers or stored anywhere. The calculator works entirely client-side with JavaScript.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon">$£€</div>Boardroom<span>Cost</span></a>
+        <p>The meeting cost calculator for teams that take productivity seriously. Free, private, and brutally honest.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tool</h4>
+        <ul>
+          <li><a href="index.html">Meeting calculator</a></li>
+          <li><a href="index.html#shareSection">Share with team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> BoardroomCost.com — All rights reserved.</span>
+      <span>Built for teams tired of expensive meetings.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/adsense.js"></script>
+<script src="js/blog.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BoardroomBlog) window.BoardroomBlog.renderHomeGrid('homeBlogGrid', 3);
+  });
+</script>
+</body>
+</html>

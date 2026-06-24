@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact BoardroomCost</title>
+<meta name="description" content="Get in touch with the BoardroomCost team — questions, feedback, or partnership inquiries.">
+<link rel="canonical" href="https://boardroomcost.com/contact.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080D1A'/><rect x='15' y='35' width='70' height='45' rx='6' fill='none' stroke='%23F59E0B' stroke-width='5'/><circle cx='35' cy='57' r='5' fill='%23F59E0B'/><circle cx='50' cy='57' r='5' fill='%23F59E0B'/><circle cx='65' cy='57' r='5' fill='%23F59E0B'/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="logo"><div class="logo-icon">$£€</div>Boardroom<span>Cost</span></a>
+    <div class="nav-links"><a href="index.html">Calculator</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html" class="active">Contact</a></div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></button>
+      <button class="mobile-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </nav>
+  <div class="mobile-menu"><a href="index.html">Calculator</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html" class="active">Contact</a></div>
+</header>
+<main>
+  <section class="hero" style="padding:48px 0 36px;">
+    <div class="container"><div class="hero-head">
+      <span class="eyebrow">Get in touch</span>
+      <h1 style="font-size:clamp(1.7rem,3.4vw,2.4rem);">Questions, feedback, or ideas?</h1>
+      <p class="hero-sub" style="margin:0 auto;">We read every message. For bug reports, include your device and browser.</p>
+    </div></div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-success" id="formSuccess">✓ Message received — we'll get back to you soon.</div>
+        <form id="contactForm">
+          <div class="form-row"><label for="cName">Name</label><input type="text" id="cName" required></div>
+          <div class="form-row"><label for="cEmail">Email</label><input type="email" id="cEmail" required></div>
+          <div class="form-row"><label for="cTopic">Topic</label>
+            <select id="cTopic"><option>General question</option><option>Bug report</option><option>Feature request</option><option>Partnership / advertising</option><option>Other</option></select>
+          </div>
+          <div class="form-row"><label for="cMessage">Message</label><textarea id="cMessage" required></textarea></div>
+          <button type="submit" class="btn btn-gold btn-block">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">$£€</div>Boardroom<span>Cost</span></a><p>The meeting cost calculator for teams that take productivity seriously.</p></div>
+    <div class="footer-col"><h4>Tool</h4><ul><li><a href="index.html">Meeting calculator</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© <span data-year></span> BoardroomCost.com</span></div>
+</div></footer>
+<button class="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="js/main.js"></script><script src="js/adsense.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('formSuccess').classList.add('show');
+  this.reset();
+  document.getElementById('formSuccess').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body></html>
